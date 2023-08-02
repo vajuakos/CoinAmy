@@ -1,0 +1,142 @@
+﻿<Application x:Class="CoinAmy.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:CoinAmy"
+             StartupUri="Login.xaml">
+    <Application.Resources>
+
+        <ResourceDictionary>
+
+            <ControlTemplate x:Key="errorTemplate">
+                <!--TextBoxban megjelenő hibaüzenet-->
+                <Border BorderBrush="#f58118" BorderThickness="2">
+                    <Grid>
+                        <AdornedElementPlaceholder/>
+                        <TextBlock Text="{Binding [0].ErrorContent}" Foreground="#f58118" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,4,0"/>
+                    </Grid>
+                </Border>
+            </ControlTemplate>
+
+            <Style x:Key="MenuButtonTemplate" TargetType="Button">
+                <!--Menü gomb-->
+                <Setter Property="Background" Value="Transparent"></Setter>
+                <Setter Property="Foreground" Value="White"></Setter>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border CornerRadius="15" Background="{TemplateBinding Background}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#f58118"></Setter>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="OrangeButtonTemplate" TargetType="Button">
+                <!--Narancssárga gomb-->
+                <Setter Property="Background" Value="#FF9332"></Setter>
+                <Setter Property="Foreground" Value="White"></Setter>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border CornerRadius="15" Background="{TemplateBinding Background}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#f58118"></Setter>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="GrayButtonTemplate" TargetType="Button">
+                <!--Szürke gomb-->
+                <Setter Property="Background" Value="#8e9eab"></Setter>
+                <Setter Property="Foreground" Value="White"></Setter>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border CornerRadius="15" Background="{TemplateBinding Background}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#75808a"></Setter>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="RedButtonTemplate" TargetType="Button">
+                <!--Piros gomb-->
+                <Setter Property="Background" Value="#e42311"></Setter>
+                <Setter Property="Foreground" Value="White"></Setter>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border CornerRadius="15" Background="{TemplateBinding Background}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#c92212"></Setter>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="GreenButtonTemplate" TargetType="Button">
+                <!--Zöld gomb-->
+                <Setter Property="Background" Value="#43993d"></Setter>
+                <Setter Property="Foreground" Value="White"></Setter>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border CornerRadius="15" Background="{TemplateBinding Background}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#3a8a34"></Setter>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="HyperlinkTemplate" TargetType="Hyperlink">
+                <!--Hiperhivatkozás-->
+                <Setter Property="Foreground" Value="White"></Setter>
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Foreground" Value="#FFE5E5E5"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
+            <Style x:Key="LeftSideCurvedTextBox" TargetType="TextBox">
+                <!--Bal oldalt lekerekített TextBox-->
+                <Style.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="35 0 0 35" />
+                    </Style>
+                </Style.Resources>
+            </Style>
+
+        </ResourceDictionary>
+
+    </Application.Resources>
+</Application>

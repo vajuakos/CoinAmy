@@ -1,0 +1,136 @@
+﻿<Window x:Class="CoinAmy.UserInvestments"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CoinAmy"
+        mc:Ignorable="d"
+        Title="CoinAmy - Portfolio" Height="900" Width="1600" MinHeight="500" MinWidth="1000" WindowStartupLocation="CenterScreen" Loaded="window_UI_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0" Background="#1e2e44">
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="75" />
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="0">
+                    <!--Menu-->
+
+                    <Image Height="75" Width="220" Source="Images/coinamy_logo_original.png" Margin="20"/>
+
+                    <Separator Height="1" Margin="20 30" Background="#FF9332"/>
+
+                    <Button x:Name="button_exchangeRates" Content="Árfolyamok" Height="50" FontSize="16" Margin="0 5 0 5" Click="button_exchangeRates_Click" Style="{StaticResource MenuButtonTemplate}"/>
+                    <Button x:Name="button_portfolio" Content="Portfolio" Height="50" FontSize="16" Margin="0 5 0 5" Style="{StaticResource MenuButtonTemplate}"/>
+                    <Button x:Name="button_currencyConverter" Content="Átváltás" Height="50" FontSize="16" Margin="0 5 0 5" Click="button_currencyConverter_Click" Style="{StaticResource MenuButtonTemplate}"/>
+
+                </StackPanel>
+
+                <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Image Height="60" Width="60" Source="Images/profilePicture.png" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="image_user_MouseLeftButtonDown"/>
+                    <TextBlock x:Name="tb_userName" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Felhasználónév" VerticalAlignment="Center" FontSize="20" Foreground="#f2ba4b" FontWeight="Bold" Margin="15"/>
+                </StackPanel>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Column="1" Background="#151f2d">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="220"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75" />
+                <RowDefinition Height="75" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Column="1" Grid.Row="2">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <Label Content="Befektetések összege:" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFE5E5E5" FontSize="14" FontWeight="Bold" Margin="0,21,0,0"/>
+                    <TextBlock x:Name="textBlock_sumOfInvestments" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Összeg" VerticalAlignment="Top" Foreground="#FFE5E5E5" FontSize="18" Margin="0,55,0,0"/>
+                </Grid>
+
+                <Grid Grid.Row="1">
+                    <Label Content="Befektetések átlaga:" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFE5E5E5" FontSize="14" FontWeight="Bold" Margin="0,21,0,0"/>
+                    <TextBlock x:Name="textBlock_avarageOfInvestments" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Átlag" VerticalAlignment="Top" Foreground="#FFE5E5E5" FontSize="18" Margin="0,55,0,0"/>
+                </Grid>
+
+                <Grid Grid.Row="2">
+                    <Label Content="Utolsó befektetés:" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFE5E5E5" FontSize="14" FontWeight="Bold" Margin="0,21,0,0"/>
+                    <TextBlock x:Name="textBlock_lastInvestment" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Kriptovaluta neve" VerticalAlignment="Top" Foreground="#FFE5E5E5" FontSize="18" Margin="0,55,0,0"/>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="0">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="200" />
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0">
+                    <TextBlock HorizontalAlignment="Left" Margin="50,0,0,0" TextWrapping="Wrap" Text="Portfolio" VerticalAlignment="Center" FontSize="36" Foreground="#FFE5E5E5" FontWeight="Bold"/>
+                </Grid>
+
+                <Grid Grid.Column="1">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Image Height="50" Width="50" Source="Images/coinIcon.png" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                        <TextBlock x:Name="textBlock_rewardPoints" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Jutalom" VerticalAlignment="Center" Foreground="#FFE5E5E5" FontSize="18"/>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="1">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="220"/>
+                    <ColumnDefinition Width="220"/>
+                    <ColumnDefinition Width="220"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="200" />
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="1">
+                    <Button x:Name="button_addUserInvestment" Content="Új hozzáadása" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Height="50" FontSize="16" Click="button_addUserInvestment_Click" Style="{StaticResource OrangeButtonTemplate}"/>
+                </Grid>
+
+                <Grid Grid.Column="2">
+                    <Button x:Name="button_removeUserInvestment" Content="Eltávolítás" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Height="50" FontSize="16" Click="button_removeUserInvestment_Click" Style="{StaticResource RedButtonTemplate}"/>
+                </Grid>
+
+                <Grid Grid.Column="3">
+                    <Button x:Name="button_editUserInvestment" Content="Szerkesztés" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Height="50" FontSize="16" Click="button_editUserInvestment_Click" Style="{StaticResource GreenButtonTemplate}"/>
+                </Grid>
+
+                <Grid Grid.Column="5">
+                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16">
+                    <Hyperlink Click="hyperlink_generatePDF_Click" Style="{StaticResource HyperlinkTemplate}"> Exportálás PDF-ként </Hyperlink>
+                    </TextBlock>
+                </Grid>
+
+            </Grid>
+
+            <Grid Grid.Row="2">
+                <ListView x:Name="listView_investments" Margin="30,30,30,30" Loaded="listView_investments_Loaded" FontSize="14"/>
+            </Grid>
+
+        </Grid>
+    </Grid>
+</Window>

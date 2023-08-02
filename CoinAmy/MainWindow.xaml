@@ -1,0 +1,75 @@
+﻿<Window x:Class="CoinAmy.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CoinAmy"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        mc:Ignorable="d"
+        Title="CoinAmy - Árfolyamok" Height="900" Width="1600" MinHeight="500" MinWidth="1000" WindowStartupLocation="CenterScreen" Loaded="window_MW_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0" Background="#1e2e44">
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="75" />
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="0">
+                    <!--Menu-->
+
+                    <Image Height="75" Width="220" Source="Images/coinamy_logo_original.png" Margin="20"/>
+
+                    <Separator Height="1" Margin="20" Background="#FF9332"/>
+
+                    <Button x:Name="button_exchangeRates" Content="Árfolyamok" Height="50" FontSize="16" Margin="0 5 0 5" Style="{StaticResource MenuButtonTemplate}"/>
+                    <Button x:Name="button_portfolio" Content="Portfolio" Height="50" FontSize="16" Margin="0 5 0 5" Click="button_portfolio_Click" Style="{StaticResource MenuButtonTemplate}"/>
+                    <Button x:Name="button_currencyConverter" Content="Átváltás" Height="50" FontSize="16" Margin="0 5 0 5" Click="button_currencyConverter_Click" Style="{StaticResource MenuButtonTemplate}"/>
+
+                </StackPanel>
+
+                <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Image Height="60" Width="60" Source="Images/profilePicture.png" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="image_user_MouseLeftButtonDown"/>
+                    <TextBlock x:Name="tb_userName" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Felhasználónév" VerticalAlignment="Center" FontSize="20" Foreground="#f2ba4b" FontWeight="Bold" Margin="15"/>
+                </StackPanel>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Column="1" Background="#151f2d">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <TextBlock HorizontalAlignment="Left" Margin="50,0,0,0" TextWrapping="Wrap" Text="Árfolyamok" VerticalAlignment="Center" FontSize="36" Foreground="#FFE5E5E5" FontWeight="Bold"/>
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <lvc:CartesianChart Series="{Binding PriceChart}" Margin="30,30,30,30">
+                    <lvc:CartesianChart.AxisY>
+                        <lvc:Axis Title="Árfolyam" LabelFormatter="{Binding YFormatter}"></lvc:Axis>
+                    </lvc:CartesianChart.AxisY>
+                    <lvc:CartesianChart.AxisX>
+                        <lvc:Axis Title="Idő" Labels="{Binding Labels}"></lvc:Axis>
+                    </lvc:CartesianChart.AxisX>
+                </lvc:CartesianChart>
+            </Grid>
+
+            <Grid Grid.Row="2">
+                <!--Kriptovaluta adatok listája-->
+
+                <ListView x:Name="listView_coins" Margin="30,10,30,30" FontSize="14" Loaded="listView_coins_Loaded" SelectionChanged="listView_coins_SelectionChanged" Background="White" />
+
+                <!--Kriptovaluta adatok listájának vége-->
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

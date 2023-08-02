@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CoinAmy.AddUserInvestment" BaseTypeListCollapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="CoinAmy.AddUserInvestment.UpdateDelegate" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>AddUserInvestment.xaml.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Class Name="CoinAmy.AddUserInvestment.UpdateEventArgs" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>AddUserInvestment.xaml.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAEGEAAAAAAAACAAAAAAAAAAAACAAAAAAAAIAAAA=</HashCode>
+      <FileName>AddUserInvestment.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CoinAmy.API_call">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAgAAAgAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>API_call.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoinAmy.CurrencyConverter" BaseTypeListCollapsed="true">
+    <Position X="4" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hCAABAAAAAAAAAAAiAAAMggABAAAAAAAAAQOAAAAAgA=</HashCode>
+      <FileName>CurrencyConverter.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CoinAmy.DbConnect">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQAEAAAQAMAAgBAAAAAAIYAIAACACAMEAAAAEIAQgAk=</HashCode>
+      <FileName>DbConnect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoinAmy.EditUserInvestment" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="7.5" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="CoinAmy.EditUserInvestment.UpdateDelegate" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>EditUserInvestment.xaml.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Class Name="CoinAmy.EditUserInvestment.UpdateEventArgs" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>EditUserInvestment.xaml.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAICAgAAAAAAAAQCCAAAAAAAAIAAAA=</HashCode>
+      <FileName>EditUserInvestment.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CoinAmy.Hash">
+    <Position X="2.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Hash.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoinAmy.Login" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACACAAAAAAAAACAAAAEgAAAAAAAAAAgEIAAAAAAE=</HashCode>
+      <FileName>Login.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CoinAmy.MainWindow" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAABAIAEgAAAgAAqAIAAggAgABQBEAAAAAAAAAAAgA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CoinAmy.AddUserInvestmentModel">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAIACAAAAAAAIAAAAAAEAAACABAAAAAAAAA=</HashCode>
+      <FileName>Models\AddUserInvestmentModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoinAmy.CryptocurrencyDataModel">
+    <Position X="0.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABYAABAQAACBIAAgkAAAAAAEARkAQAQgwEAAAAAAgA=</HashCode>
+      <FileName>Models\CryptocurrencyDataModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoinAmy.HistoricalDataModel">
+    <Position X="5.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\HistoricalDataModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoinAmy.Coin">
+    <Position X="5.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\HistoricalDataModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoinAmy.UserDataModel">
+    <Position X="2.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAEAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Models\UserDataModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoinAmy.RegistrationViewModel" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAgIQAAAAEAgAAAAAACAAAAAgAAAAA=</HashCode>
+      <FileName>Models\UserDataValidator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CoinAmy.UsernameValidator">
+    <Position X="9.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\UserDataValidator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoinAmy.EmailValidator">
+    <Position X="9.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\UserDataValidator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoinAmy.UserDataValidator">
+    <Position X="2.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEACAAAAACAAAAACAIAAAAAIAAIgAIACCAAQAAAoAE=</HashCode>
+      <FileName>Models\UserDataValidator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoinAmy.PDF_generate">
+    <Position X="4" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAACAAAAIAAAAAAAAEIBAAAACAAAAA=</HashCode>
+      <FileName>PDF_generate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoinAmy.Registration" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAACgCAAAAAAAAACAIAAAgAAAAAAAAAAgEAAAAAAAA=</HashCode>
+      <FileName>Registration.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CoinAmy.UserInvestments" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQBAAABgAEAAIACAIAAAoABAAIAAAAAAQCIAAAABA=</HashCode>
+      <FileName>UserInvestments.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CoinAmy.UserSettings" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAACAAAAAAgAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>UserSettings.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

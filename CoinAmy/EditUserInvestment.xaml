@@ -1,0 +1,40 @@
+﻿<Window x:Class="CoinAmy.EditUserInvestment"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CoinAmy"
+        mc:Ignorable="d"
+        Title="CoinAmy - Befektetés szerkesztése" Height="450" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Loaded="window_editUserInvestment_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="65"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0" Background="#1e2e44">
+
+            <StackPanel Grid.Row="0">
+                <Image Height="40" Width="40" Source="Images/Coinamy_logo.png" Margin="0,20"/>
+            </StackPanel>
+
+        </Grid>
+
+        <Grid Grid.Column="1" Background="#151f2d">
+
+            <Label Content="Megnevezés" HorizontalAlignment="Left" Margin="58,40,0,0" VerticalAlignment="Top" Width="96" FontWeight="Bold" FontSize="14" Foreground="#FFE5E5E5"/>
+            <TextBox x:Name="textBox_currencyName" HorizontalAlignment="Left" Margin="58,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Height="30" FontSize="14" VerticalContentAlignment="Center"/>
+            <Label Content="Ticker" HorizontalAlignment="Left" Margin="265,40,0,0" VerticalAlignment="Top" Width="56" FontWeight="Bold" FontSize="14" Foreground="#FFE5E5E5"/>
+            <TextBox x:Name="textBox_ticker" HorizontalAlignment="Left" Margin="265,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Height="30" CharacterCasing="Upper" FontSize="14" VerticalContentAlignment="Center"/>
+            <Label Content="Befektetett összeg (Ft)" HorizontalAlignment="Left" Margin="58,126,0,0" VerticalAlignment="Top" Width="158" FontWeight="Bold" FontSize="14" Foreground="#FFE5E5E5"/>
+            <TextBox x:Name="textBox_moneyInvested" HorizontalAlignment="Left" Margin="58,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Height="30" FontSize="14" VerticalContentAlignment="Center"/>
+            <Label Content="Árfolyam (Ft)" HorizontalAlignment="Left" Margin="265,126,0,0" VerticalAlignment="Top" Width="100" FontWeight="Bold" FontSize="14" Foreground="#FFE5E5E5"/>
+            <TextBox x:Name="textBox_priceOnBought" HorizontalAlignment="Left" Margin="265,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Height="30" FontSize="14" VerticalContentAlignment="Center"/>
+            <Label Content="Vásárlás dátuma" HorizontalAlignment="Left" Margin="58,214,0,0" VerticalAlignment="Top" Width="121" FontWeight="Bold" FontSize="14" Foreground="#FFE5E5E5"/>
+            <DatePicker x:Name="datePicker_dateOnBought" HorizontalAlignment="Left" Margin="58,243,0,0" VerticalAlignment="Top" Width="200" SelectedDateFormat="Short"/>
+
+            <TextBlock x:Name="tb_errorMessage" HorizontalAlignment="Left" Margin="276,323,0,0" TextWrapping="Wrap" Text="Hibaüzenet" VerticalAlignment="Top" FontSize="16" Foreground="#FFE5E5E5" FontWeight="Bold"/>
+            <Button x:Name="button_addInvestment" Content="Szerkesztés" HorizontalAlignment="Left" Margin="58,314,0,0" VerticalAlignment="Top" Width="150" Height="40" Style="{StaticResource OrangeButtonTemplate}" FontSize="14" Click="button_editInvestment_Click"/>
+        </Grid>
+    </Grid>
+</Window>
